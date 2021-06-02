@@ -1,0 +1,195 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="footballapi/src/angular-footballdata-api-factory.js"></script>
+<script src="footnotify.js"></script>
+<link rel="stylesheet" type="text/css" href="footnotify.css">
+
+</head>
+<body ng-app="app">
+	<div class="header">
+		<ul>
+			<li style="float:left;"><a href="footnotify.html"><img style="margin-top:0px;height:33px;width:200px;" src="Footnotify.png"></a></li>
+			<li style="float:right;"><form><input type="text" name="search" placeholder="Search.."></form></li>
+		</ul>
+	</div>
+	<div class="menu">
+		<ul>
+			<li style="border:0px;border-bottom:5px; border-style: solid;  border-color: white;"><a style="color:grey;" href="footnotify.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			
+			<li><a href="login.html">Login</a></li>
+			<li><a href="myteam.html">My Team</a></li>
+			<li><a href="news.html">News</a></li>
+			<li><a href="streams.html">Live Stream</a></li>
+			<li><a href="scores.html">Results</a></li>	
+			<li><a href="highlights.html">Highlights</a></li>
+			<li><a href="registration.html">Register</a></li>
+			<li><a href="contact.html">Contact</a></li>
+
+		</ul>
+	</div>
+
+	<div class="main-content">
+	<div class="container">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active"><a href="http://www.goal.com/en/news/1862/premier-league/2017/05/16/35578052/without-alexis-arsenal-would-have-no-hope-of-champions?ICID=HP_HN_2">
+        <img src="http://images.performgroup.com/di/library/GOAL/ee/87/alexis-sanchez-arsenal-premier-league_140we9il9wnyk1ufl9ikwgbz9u.jpg?t=318141212&amp;w=620&amp;h=430" alt="Without Alexis, Arsenal would have no hope of Champions League miracle" width="460" height="345">
+        <div class="carousel-caption">
+          <h3 style="background-color: black;">Without Alexis, Arsenal would have no hope of Champions League miracle</h3>
+          <p style="background-color: white; color:black;">Source: Goal.com</p>
+        </div></a>
+      </div>
+
+      <div class="item">
+        <a href="http://www.goal.com//en/news/1862/premier-league/2017/05/16/35579162/ozils-record-setting-night-and-the-stats-that-show-how-one-sided-?ICID=HP_HN_1">
+        <img src="http://images.performgroup.com/di/library/GOAL/bf/a7/mesut-ozil-arsenal-premier-league_104yjq05jv05o1xkqq1th5mf1r.jpg?t=323067970&amp;w=460&amp;h=320" alt="Ozil sets new PL creation record" width="460" height="345">
+        <div class="carousel-caption">
+          <h3 style="background-color: black;">Ozil sets new PL creation record</h3>
+          <p style="background-color: white; color:black;">Source: Goal.com</p>
+        </div></a>
+      </div>
+
+
+      <div class="item">
+       <a href="http://www.goal.com/en/news/1862/premier-league/2017/05/16/35570482/rooney-xhaka-mahrez-underwhelm-in-worst-premier-league-team?ICID=HP_HN_3">
+        <img src="http://images.performgroup.com/di/library/GOAL/e/61/wayne-rooney-manchester-united_g0w487tapujj1gn2degj32n7h.jpg?t=1103436402&amp;w=460&amp;h=320" alt="Worst Premier League Team of the Year" width="460" height="345">
+        <div class="carousel-caption">
+          <h3 style="background-color: black;">Worst Premier League Team of the Year</h3>
+          <p style="background-color: white; color:black;">Source: Goal.com</p>
+        </div></a>
+      </div>
+
+      <div class="item">
+       <a href="http://www.goal.com/en/news/11/transfer-zone/2017/05/16/35240712/james-can-step-out-of-ronaldo-and-bale-shadows-at-madrid-to-be-a-?ICID=HP_HN_4">
+        <img src="http://images.performgroup.com/di/library/GOAL/f1/67/james-rodriguez-man-utd-gfx-hp_1wtprl4omqpa91jfekk7ses6ww.png?t=291768292&amp;w=460&amp;h=320" alt="Could James be Man Utd's Galactico?" width="460" height="345">
+        <div class="carousel-caption">
+          <h3 style="background-color: black;">Could James be Man Utd's Galactico?</h3>
+          <p style="background-color: white; color:black;">Source: Goal.com</p>
+        </div></a>
+      </div>
+  
+      <div class="item">
+       <a href="http://www.goal.com/en/news/722/la-liga/2017/05/16/35562992/ronaldo-snubbed-as-messi-isco-lead-la-liga-team-of-the?ICID=HP_HN_5">
+        <img src="http://images.performgroup.com/di/library/GOAL/17/9e/cristiano-ronaldo_1xfsg2rs3y20718ck9hfrni276.jpg?t=286679780&amp;w=460&amp;h=320" alt="Ronaldo snubbed in La Liga Best XI" width="460" height="345">
+        <div class="carousel-caption">
+          <h3 style="background-color: black;">Ronaldo snubbed in La Liga Best XI</h3>
+          <p style="background-color: white; color:black;">Source: Goal.com</p>
+        </div></a>
+      </div>
+
+    </div>
+
+    <!-- Left and right buttons -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>
+
+     <div class="newsbox">
+
+          <div class="n1">
+            <a href="http://www.goal.com//en/news/1862/premier-league/2017/05/16/35579162/ozils-record-setting-night-and-the-stats-that-show-how-one-sided-?ICID=HP_HN_1">
+            <img src="http://images.performgroup.com/di/library/GOAL/bf/a7/mesut-ozil-arsenal-premier-league_104yjq05jv05o1xkqq1th5mf1r.jpg?t=323067970" alt="Ozil sets new PL creation record">
+            <div>
+              <h3 style="background-color: black;">Ozil sets new PL creation record</h3>
+              <p style="background-color: white; color:black;">Source: Goal.com</p>
+            </div></a>
+          </div>
+
+
+          <div class="n2">
+           <a href="http://www.goal.com/en/news/1862/premier-league/2017/05/16/35570482/rooney-xhaka-mahrez-underwhelm-in-worst-premier-league-team?ICID=HP_HN_3">
+            <img src="http://images.performgroup.com/di/library/GOAL/e/61/wayne-rooney-manchester-united_g0w487tapujj1gn2degj32n7h.jpg?t=1103436402" alt="Worst Premier League Team of the Year">
+            <div>
+              <h3 style="background-color: black;">Worst Premier League Team of the Year</h3>
+              <p style="background-color: white; color:black;">Source: Goal.com</p>
+            </div></a>
+          </div>
+
+          <div class="n3">
+           <a href="http://www.goal.com/en/news/11/transfer-zone/2017/05/16/35240712/james-can-step-out-of-ronaldo-and-bale-shadows-at-madrid-to-be-a-?ICID=HP_HN_4">
+            <img src="http://images.performgroup.com/di/library/GOAL/f1/67/james-rodriguez-man-utd-gfx-hp_1wtprl4omqpa91jfekk7ses6ww.png?t=291768292" alt="Could James be Man Utd's Galactico?">
+            <div>
+              <h3 style="background-color: black;">Could James be Man Utd's Galactico?</h3>
+              <p style="background-color: white; color:black;">Source: Goal.com</p>
+            </div></a>
+          </div>
+      
+          <div class="n4">
+           <a href="http://www.goal.com/en/news/722/la-liga/2017/05/16/35562992/ronaldo-snubbed-as-messi-isco-lead-la-liga-team-of-the?ICID=HP_HN_5">
+            <img src="http://images.performgroup.com/di/library/GOAL/17/9e/cristiano-ronaldo_1xfsg2rs3y20718ck9hfrni276.jpg?t=286679780" alt="Ronaldo snubbed in La Liga Best XI">
+            <div>
+              <h3 style="background-color: black;">Ronaldo snubbed in La Liga Best XI</h3>
+              <p style="background-color: white; color:black;">Source: Goal.com</p>
+            </div></a>
+          </div>
+
+        </div>
+
+    </div>
+</div>
+
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#standings">League Standings</a></li>
+    <li><a data-toggle="tab" href="#results">Results</a></li>
+    <li><a data-toggle="tab" href="#fixtures">Fixtures</a></li>
+  </ul>
+
+  <div class="tab-content">
+     <div id="standings" class="tab-pane fade in active" ng-controller="controller">
+    <table class="standings" ng-model="standings" cellspacing="5px" cellpadding="5px" style="border:2px; border-style:solid;">
+    <tr style="background-color: #003366; color:white;"><th colspan="10" style=" text-align:center;">Premier League Standings</th></tr>
+    <tr><td>#</td><td>Team</td><td>MP</td><td>W</td><td>D</td><td>L</td><td>F</td><td>A</td><td>D</td><td>P</td></tr>
+    <tr ng-repeat="standing in standings"><td>{{standing['position']}}</td><td>{{standing['teamName']}}</td><td>{{standing['playedGames']}}</td><td>{{standing['wins']}}</td><td>{{standing['draws']}}</td><td>{{standing['losses']}}</td><td>{{standing['goals']}}</td><td>{{standing['goalsAgainst']}}</td><td>{{standing['goalDifference']}}</td><td>{{standing['points']}}</td></tr>  
+    </table>
+  </div>
+     <div id="results" class="tab-pane fade" ng-controller="controller3">
+    <table class="results" ng-model="results" cellspacing="5px" cellpadding="5px" style="border:2px; border-style:solid;">
+    <tr style="background-color: #003366; color:white;"><th colspan="6" style="text-align:center">Premier League Results</th></tr>
+    <tr><td>Home Team</td><td colspan="2">Score</td><td>Away Team</td><td>Matchday</td></tr>
+    <tr ng-repeat="fixtures in results"><td>{{fixtures['homeTeamName']}}</td><td colspan="2">{{fixtures['result']['goalsHomeTeam']}} - {{fixtures['result']['goalsHomeTeam']}}</td><td>{{fixtures['awayTeamName']}}</td><td colspan="3">Matchday {{fixtures['matchday']}}</td></tr></tr>
+    </table>
+    </div>
+      <div id="fixtures" class="tab-pane fade" ng-controller="controller2">
+    <table class="fixtures" ng-model="lfixtures" cellspacing="5px" cellpadding="5px" style="border:2px; border-style:solid;">
+    <tr style="background-color: #003366; color:white;"><th colspan="4" style="text-align:center">Premier League Fixtures</th></tr>
+    <tr><td>Home Team</td><td>vs</td><td>Away Team</td><td>Matchday</td></tr>
+    <tr ng-repeat="fixtures in lfixtures"><td>{{fixtures['homeTeamName']}}</td><td>vs</td><td>{{fixtures['awayTeamName']}}</td><td colspan="3">Matchday {{fixtures['matchday']}}</td></tr></tr>
+    </table>
+    </div>
+  </div>
+</div>
+
+	<div class="footer">
+	<center>
+	<img style="height:40px; width:150px;" src="Footnotify.png"></center>
+	<p>This site is a production of 4 of the Boys.</p>
+	<p style="font-size: 12px; font-family: serif;">Copyright © 2017 Footnotify.com All rights reserved. The information contained in Footnotify.com may not be published, broadcast, rewritten, or redistributed without the prior written authority of Footnotify.com</p>		
+	</div>
+</body>
+</html>

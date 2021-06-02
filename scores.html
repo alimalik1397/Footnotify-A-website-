@@ -1,0 +1,90 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="footballapi/src/angular-footballdata-api-factory.js"></script>
+<script src="footnotify.js"></script>
+<link rel="stylesheet" type="text/css" href="footnotify.css">
+
+<script>
+
+
+
+	var app = angular.module("app", ['jtt_footballdata']);
+	var id='66';
+
+app.controller('controller8', ['$scope', 'footballdataFactory', function($scope, footballdataFactory) {
+
+footballdataFactory.getFixturesByTeam({ 
+id: id, 
+season: '', // (optional) Defaults to the current year, given as 4 digit like '2015' 
+timeFrame: 'p21', // (optional) The value of the timeFrame argument must start with either 'p' for past or 'n' for next. It is followed by a number in the range 1-99. 
+venue: '', // (optional) Valid values: `home` and `away`. Default is unset. 
+protocol: 'http', // (optional) 'http', 'https', 'auto' 
+apiKey: '7e77568cd77649b9bcc5327efc3a4700', // Register for a free api key: http://api.football-data.org/register 
+}).then(function (_data) { 
+	$scope.results=_data["data"]["fixtures"];
+	console.info($scope.results);
+//on success 
+}).catch(function (_data) { 
+//on error 
+});
+
+}]);
+
+
+function teamchange(){
+	teamid=document.getElementById("teamid");
+	id=teamid.options[teamid.selectedIndex].value;
+	console.info(id);
+}
+
+</script>
+</head>
+<body ng-app="app">
+	<div class="header">
+		<ul>
+			<li style="float:left;"><a href="footnotify.html"><img style="margin-top:0px;height:33px;width:200px;" src="Footnotify.png"></a></li>
+			<li style="float:right;"><form><input type="text" name="search" placeholder="Search.."></form></li>
+		</ul>
+	</div>
+	<div class="menu">
+		<ul>
+			<li><a href="footnotify.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="login.html">Login</a></li>
+			<li><a href="myteam.html">My Team</a></li>
+			<li><a href="news.html">News</a></li>
+			<li><a href="streams.html">Live Stream</a></li>
+			<li style="border:0px;border-bottom:5px; border-style: solid;  border-color: white;"><a  style="color:grey;" href="scores.html">Results</a></li>	
+			<li><a href="highlights.html">Highlights</a></li>
+			<li><a href="D:\Lectures\4th Semester\Web Engineering\Footnotify\registration.html">Register</a></li>
+			<li><a href="Contact.html">Contact </a></li>
+		</ul>
+	</div>
+	<div style="margin-left: 500px; margin-top: 5px">
+	<label>Showing results of:</label>
+	<select id="teamid" onclick="teamchange()">
+		<option value="'66'">Manchester United FC</option><option value="'67'">Newcastle United FC</option><option value="'68'">Norwich City FC</option>
+		<option value="'69'">Queens Park Rangers FC</option><option value="'70'">Stoke City FC</option><option value="'71'">Sunderland AFC</option>
+		<option value="'72'">Swansea City FC</option><option value="'73'">Tottenham Hotspur FC</option><option value="'74'">West Bromwich Albion FC</option>
+		<option value="'75'">Wigan Athletic FC</option><option value="'65'">Manchester City FC</option><option value="'64'">Liverpool FC</option>
+		<option value="'63'">Fulham FC</option><option value="'62'">Everton FC</option><option value="'61'">Chelsea FC</option>
+		<option value="'58'">Aston Villa FC</option><option value="'57'">Arsenal FC</option><option value="'59'">Blackburn Rovers FC</option>
+		<option value="'76'">Wolverhampton Wanderers FC</option><option value="'60'">Bolton Wanderers FC</option>
+	</select>
+	</div>
+
+	<div id="results" ng-controller="controller8">
+    <table class="results" ng-model="results" cellspacing="5px" cellpadding="5px" style="border:2px; border-style:solid;">
+    <tr style="background-color: #003366; color:white;"><th colspan="6" style="text-align:center">Premier League Results</th></tr>
+    <tr><td>Home Team</td><td colspan="2">Score</td><td>Away Team</td><td>Matchday</td></tr>
+    <tr ng-repeat="fixtures in results"><td>{{fixtures['homeTeamName']}}</td><td colspan="2">{{fixtures['result']['goalsHomeTeam']}} - {{fixtures['result']['goalsHomeTeam']}}</td><td>{{fixtures['awayTeamName']}}</td><td colspan="3">Matchday {{fixtures['matchday']}}</td></tr></tr>
+    </table>
+    </div>
+</body>
+</html>

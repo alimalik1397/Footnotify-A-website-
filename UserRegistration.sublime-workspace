@@ -1,0 +1,267 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"ali",
+				"align-content"
+			],
+			[
+				"team",
+				"teamheader"
+			],
+			[
+				"foot",
+				"footnotify"
+			],
+			[
+				"footn",
+				"footnotify"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/xampp/htdocs/pwdmis/products/currentstock.php",
+			"settings":
+			{
+				"buffer_size": 16010,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/xampp/htdocs/logestic/config.php",
+		"/C/xampp/htdocs/logestic/index.php",
+		"/C/xampp/htdocs/logestic/currentstock.php",
+		"/C/xampp/htdocs/pwdmis/config.php",
+		"/C/xampp/htdocs/pwdmis/products/currentstock.php",
+		"/D/CV/CoverLetter.docx",
+		"/E/Seasons/Barking Up the Wrong Tree_ The Surprising Science Behind Why Everything You Know About Success Is (Mostly) Wrong by Eric Barker ePUB eBOOK-ZAK/Barking Up the Wrong Tree - Eric Barker.epub",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/E/Assignment/Part1.m",
+		"/E/Assignment/Part2.m",
+		"/C/Users/Talha/Desktop/SCP-DS-Driver-Package-1.2.0.160.7z",
+		"/D/Lectures/6th Semester/Programming Languages/CodeSamples/Week 1/sec1solutions.sml",
+		"/D/Downloads/canny.m",
+		"/C/Users/Talha/Desktop/socket.js",
+		"/C/Users/Talha/Downloads/Compressed/Muhammad Fahad Zia BSCS 5B 121956/shopSmart.py",
+		"/C/Users/Talha/Downloads/Compressed/Muhammad Fahad Zia BSCS 5B 121956/addition.py",
+		"/C/Users/Talha/Downloads/Compressed/Muhammad Fahad Zia BSCS 5B 121956/buyLotsOfFruit.py",
+		"/D/Downloads/SikanderR (1).docx",
+		"/G/README.diskdefines",
+		"/E/Seasons/HIMYM/How I Met Your Mother Season 4/How I Met Your Mother S04E02 The Best Burger in New York (1080p x265 Joy).m4v",
+		"/C/Users/Talha/Desktop/test1.html",
+		"/D/Lectures/4th Semester/Web Engineering/Footnotify/streams.html",
+		"/D/Lectures/4th Semester/Web Engineering/Footnotify/footnotify.js",
+		"/D/Lectures/4th Semester/Web Engineering/Footnotify/footnotify.html",
+		"/D/Lectures/4th Semester/Web Engineering/Footnotify/registration.html",
+		"/D/Lectures/4th Semester/Web Engineering/Footnotify/highlights.html",
+		"/D/Lectures/4th Semester/Web Engineering/Footnotify/scores.html",
+		"/D/Lectures/4th Semester/Web Engineering/Footnotify/News.html",
+		"/D/Lectures/4th Semester/Web Engineering/Footnotify/myteam.html",
+		"/D/Lectures/4th Semester/Web Engineering/Footnotify/css.css",
+		"/D/Lectures/4th Semester/Web Engineering/Footnotify/login.html",
+		"/D/Lectures/4th Semester/Web Engineering/Footnotify/footnotify2.css",
+		"/D/Lectures/4th Semester/Web Engineering/Footnotify/contact.html",
+		"/D/Lectures/4th Semester/Web Engineering/Footnotify/about.html",
+		"/C/Users/Talha/Desktop/Footnotify/gettingstarted.html",
+		"/C/Users/Talha/Desktop/Footnotify/login.html",
+		"/C/Users/Talha/Desktop/Footnotify/registration.html",
+		"/C/Users/Talha/Desktop/Footnotify/News.html",
+		"/C/Users/Talha/Desktop/Footnotify/footnotify.html",
+		"/C/Users/Talha/Desktop/Footnotify/highlights.html",
+		"/C/Users/Talha/Desktop/Footnotify/myteam.html",
+		"/C/Users/Talha/Desktop/Footnotify/streams.html",
+		"/C/Users/Talha/Desktop/Footnotify/scores.html",
+		"/C/Users/Talha/Desktop/file.html",
+		"/D/Lectures/4th Semester/Web Engineering/Footnotify/UserRegistration.html"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/xampp/htdocs/pwdmis/products/currentstock.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16010,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "UserRegistration.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

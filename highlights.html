@@ -1,0 +1,303 @@
+<html lang="en">
+<head>
+  <title>Highlights</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 60%;
+      margin: auto;
+  }
+  </style>
+
+<style type="text/css">
+.button {
+ 	color: #900;
+  	background: #FF0;
+ 	 font-weight: bold;
+ 	 border: 1px solid #900;
+}
+.button:hover {
+  color: black;
+  background: #900;
+}
+   .hidden {
+        display: none;
+   }
+   .visible {
+        display: block;
+   }
+</style>
+<link rel="stylesheet" type="text/css" href="footnotify.css">
+</head>
+
+
+<body style="background-color: white;">
+
+<div class="header">
+		<ul>
+			<li style="float:left;"><a href="footnotify.html"><img style="margin-top:0px;height:33px;width:200px;" src="Footnotify.png"></a></li>
+			<li style="float:right;"><form><input type="text" name="search" placeholder="Search.."></form></li>
+		</ul>
+	</div>
+
+  <div class="menu">
+    <ul>
+      <li><a href="footnotify.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="myteam.html">My Team</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="streams.html">Live Stream</a></li>
+      <li><a href="scores.html">Results</a></li>
+
+      <li style="border:0px;border-bottom:5px; border-style: solid;  border-color: white;"><a style="color:grey;" href="highlights.html">Highlights</a></li>
+      <li><a href="D:\Lectures\4th Semester\Web Engineering\Footnotify\registration.html">Register</a></li>
+      <li> <a href="contact.html">Contact </a></li>
+    </ul>
+
+<br>
+<div align="center">
+<button class="button" style="background-color:red;" id="manu_btn">ManU</button>
+<button class="button" style="background-color:white;"id="arsenel_btn">Arsenal</button>
+<button class="button" style="background-color:#ADD8E6;"id="chelsea_btn">Chelsea</button>
+</div>
+
+<script type="text/javascript">
+
+    var manu = document.getElementById('largemanu');
+    var manubtn = document.getElementById('manu_btn');
+ 	 manubtn.onclick = function() {
+        largemanu.setAttribute('class', 'visible');
+      	smallmanu.setAttribute('class', 'visible');
+	largearsenel.setAttribute('class', 'hidden');
+      	smallarsenel.setAttribute('class', 'hidden');
+	 largechelsea.setAttribute('class', 'hidden');
+      	smallchelsea.setAttribute('class', 'hidden');
+};
+
+
+ var arsenel= document.getElementById('arsenelmanu');
+    var arsenelbtn = document.getElementById('arsenel_btn');
+   arsenelbtn.onclick = function() {
+        largearsenel.setAttribute('class', 'visible');
+      	smallarsenel.setAttribute('class', 'visible');
+	largemanu.setAttribute('class', 'hidden');
+      	smallmanu.setAttribute('class', 'hidden');
+	 largechelsea.setAttribute('class', 'hidden');
+      	smallchelsea.setAttribute('class', 'hidden');
+};
+ 
+ var chelsea = document.getElementById('chelseamanu');
+    var chelseabtn = document.getElementById('chelsea_btn');
+
+   chelseabtn.onclick = function() {
+        largechelsea.setAttribute('class', 'visible');
+      	smallchelsea.setAttribute('class', 'visible');
+	 largemanu.setAttribute('class', 'hidden');
+      	smallmanu.setAttribute('class', 'hidden');
+	largearsenel.setAttribute('class', 'hidden');
+      	smallarsenel.setAttribute('class', 'hidden');
+    };
+
+</script>
+
+
+
+
+<div id="largemanu" class="hidden"  width="1200" height="500" >
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" width="1200" height="500">
+    <!-- Indicators -->
+    <ol class="carousel-indicators"  style=" display: flex; align-content: 
+center; justify-content: center;">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+	<li data-target="#myCarousel" data-slide-to="4"></li>
+	<li data-target="#myCarousel" data-slide-to="5"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox"  >
+      <div class="item active">
+       <iframe width="1400" height="500" align="center"src="https://www.youtube.com/embed/N2gK5Da4WLc" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="item">
+        <iframe width="1400" height="500" src="https://www.youtube.com/embed/MNfpiNszlDw" frameborder="0" allowfullscreen></iframe>
+      </div>
+    
+      <div class="item">
+        <iframe width="1400" height="500" src="https://www.youtube.com/embed/EkRCNVzLzMY" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="item">
+        <iframe width="1400" height="500" src="https://www.youtube.com/embed/HQZENjcAF38" frameborder="0" allowfullscreen></iframe>
+      </div>
+ <div class="item">
+        <iframe width="1400" height="500"  src="https://www.youtube.com/embed/0GUtWhw473I" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<br>
+
+<div id="smallmanu" class="hidden" width="560" height="315" align="center"  >
+<iframe width="200" height="200" src="https://www.youtube.com/embed/N2gK5Da4WLc" frameborder="0" allowfullscreen></iframe>
+<iframe width="200" height="200"  src="https://www.youtube.com/embed/MNfpiNszlDw" frameborder="0" allowfullscreen></iframe>
+<iframe width="200" height="200"  src="https://www.youtube.com/embed/EkRCNVzLzMY" frameborder="0" allowfullscreen></iframe>
+<iframe width="200" height="200" src="https://www.youtube.com/embed/HQZENjcAF38" frameborder="0" allowfullscreen></iframe>
+<iframe width="200" height="200" src="https://www.youtube.com/embed/0GUtWhw473I" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
+
+
+
+
+<div id="largearsenel" class="hidden"  width="1200" height="500" >
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel"  width="1200" height="500">
+    <!-- Indicators -->
+   <ol class="carousel-indicators"  style=" display: flex; align-content: 
+center; justify-content: center;">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+	<li data-target="#myCarousel" data-slide-to="4"></li>
+	<li data-target="#myCarousel" data-slide-to="5"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox"  >
+      <div class="item active">
+      <iframe  width="1400" height="500" src="https://www.youtube.com/embed/RQCJtBU5P9s" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="item">
+        <iframe  width="1400" height="500" src="https://www.youtube.com/embed/7sVRXIwC9ZI" frameborder="0" allowfullscreen></iframe>
+      </div>
+    
+      <div class="item">
+        <iframe  width="1400" height="500" src="https://www.youtube.com/embed/YURq_iwJ044" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="item">
+        <iframe  width="1400" height="500" src="https://www.youtube.com/embed/YavTaBYzSdo" frameborder="0" allowfullscreen></iframe>
+      </div>
+ <div class="item">
+       <iframe  width="1400" height="500" src="https://www.youtube.com/embed/S7BNl-lJ86Y" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<br>
+
+<div id="smallarsenel" class="hidden" width="560" height="315" align="center"  
+>
+<iframe width="200" height="200" src="https://www.youtube.com/embed/RQCJtBU5P9s" frameborder="0" allowfullscreen></iframe>
+<iframe width="200" height="200" src="https://www.youtube.com/embed/7sVRXIwC9ZI" frameborder="0" allowfullscreen></iframe>
+<iframe width="200" height="200" src="https://www.youtube.com/embed/YURq_iwJ044" frameborder="0" allowfullscreen></iframe>
+<iframe width="200" height="200" src="https://www.youtube.com/embed/YavTaBYzSdo" frameborder="0" allowfullscreen></iframe>
+<iframe width="200" height="200" src="https://www.youtube.com/embed/S7BNl-
+lJ86Y" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
+
+
+
+
+<div id="largechelsea" class="hidden"  width="1200" height="500" >
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel"  width="1200" height="500">
+    <!-- Indicators -->
+    <ol class="carousel-indicators"  style=" display: flex; align-content: 
+center; justify-content: center;">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+	<li data-target="#myCarousel" data-slide-to="4"></li>
+	<li data-target="#myCarousel" data-slide-to="5"></li>
+    </ol>
+
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox" >
+
+
+      <div class="item active" >
+       <iframe  width="1400" height="500" src="https://www.youtube.com/embed/XnrApPJTWCo" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="item">
+       <iframe  width="1400" height="500" src="https://www.youtube.com/embed/FboPpgIMHrs" frameborder="0" allowfullscreen></iframe>
+      </div>
+    
+      <div class="item">
+       <iframe  width="1400" height="500" src="https://www.youtube.com/embed/FMoyHbq8XKE" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="item">
+       <iframe  width="1400" height="500" src="https://www.youtube.com/embed/vKwacc_bwrM" frameborder="0" allowfullscreen></iframe>
+      </div>
+ <div class="item">
+        <iframe  width="1400" height="500" src="https://www.youtube.com/embed/_sLDugqKYxQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<br>
+
+<div id="smallchelsea" class="hidden" width="560" height="315" align="center"  
+>
+<iframe width="200" height="200" src="https://www.youtube.com/embed/XnrApPJTWCo" frameborder="0" allowfullscreen></iframe>
+<iframe width="200" height="200" src="https://www.youtube.com/embed/FboPpgIMHrs" frameborder="0" allowfullscreen></iframe>
+<iframe width="200" height="200" src="https://www.youtube.com/embed/FMoyHbq8XKE" frameborder="0" allowfullscreen></iframe>
+<iframe width="200" height="200" src="https://www.youtube.com/embed/vKwacc_bwrM" frameborder="0" allowfullscreen></iframe>
+<iframe width="200" height="200" src="https://www.youtube.com/embed/_sLDugqKYxQ" frameborder="0" allowfullscreen></iframe>
+</div>
+
+</body>
+</html>

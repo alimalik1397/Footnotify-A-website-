@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="footballapi/src/angular-footballdata-api-factory.js"></script>
+<script src="footnotify.js"></script>
+<link rel="stylesheet" type="text/css" href="footnotify.css">
+
+</head>
+<body background="red.jpg" style="background-size: cover;" ng-app="app">
+<div class="header">
+		<ul>
+			<li style="float:left;"><a href="footnotify.html"><img style="margin-top:0px;height:33px;width:200px;" src="Footnotify.png"></a></li>
+			<li style="float:right;"><form><input type="text" name="search" placeholder="Search.."></form></li>
+		</ul>
+	</div>
+
+	<div class="menu">
+		<ul style="background-color: maroon;">
+			<li><a href="footnotify.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li style="border:0px;border-bottom:5px; border-style: solid;  border-color: white;"><a style="color:grey;" href="myteam.html">My Team</a></li>
+			<li><a href="news.html">News</a></li>
+			<li><a href="streams.html">Live Stream</a></li>
+			<li><a href="scores.html">Results</a></li>
+			<li><a href="highlights.html">Highlights</a></li>
+			<li><a href="D:\Lectures\4th Semester\Web Engineering\Footnotify\registration.html">Register</a></li>
+			<li><a href="Contact.html">Contact</a></li>
+		</ul>
+	</div>
+
+	<div class="myteam" ng-controller="controller5" style="width:100%; height:auto;">
+	<center>	
+	<img src={{manu.crestUrl}} style="width:150px; height:150px;">
+	<h3 style="color:white;">Name: {{manu.name}}</h3>
+	<h3 style="color:white;">Abbreviation: {{manu.shortName}}</h3>
+	</center>
+	</div>
+
+	<div class="teamdata">
+		<div id="squad" ng-controller="controller4">
+	    <table class="squad" ng-model="squad" cellpadding="5px">
+	    <tr style="background-color: maroon; color:white;"><th colspan="6" style="text-align:center">Manchester United Squad 2016/17</th></tr>
+	    <tr><td>Name</td><td>Position</td><td>Jersey Number</td><td>Nationality</td><td>Date of Birth</td><td>Contract Until</td></tr>
+	    <tr ng-repeat="players in squad"><td>{{players['name']}}</td><td>{{players['position']}}</td><td>{{players['jerseyNumber']}}</td><td>{{players['nationality']}}</td><td>{{players['dateOfBirth']}}</td><td>{{players['contractUntil']}}</td></tr>
+	    </table>
+	    </div>
+	</div>
+
+	 <div id="mresults" ng-controller="controller6">
+    <table class="mresults" ng-model="mresults" cellspacing="5px" cellpadding="5px" style="border:2px; border-style:solid;">
+    <tr style="background-color: #003366; color:white;"><th colspan="6" style="text-align:center">Manchester United Results</th></tr>
+    <tr><td>Home Team</td><td colspan="2">Score</td><td>Away Team</td><td>Matchday</td></tr>
+    <tr ng-repeat="fixtures in mresults"><td>{{fixtures['homeTeamName']}}</td><td colspan="2">{{fixtures['result']['goalsHomeTeam']}} - {{fixtures['result']['goalsHomeTeam']}}</td><td>{{fixtures['awayTeamName']}}</td><td colspan="3">Matchday {{fixtures['matchday']}}</td></tr></tr>
+    </table>
+    </div>
+
+    <div id="mfixtures" ng-controller="controller7">
+    <table class="mfixtures" ng-model="mfixtures" cellspacing="5px" cellpadding="5px" style="border:2px; border-style:solid;">
+    <tr style="background-color: #003366; color:white;"><th colspan="4" style="text-align:center">Manchester United Fixtures</th></tr>
+    <tr><td>Home Team</td><td>vs</td><td>Away Team</td><td>Matchday</td></tr>
+    <tr ng-repeat="fixtures in mfixtures"><td>{{fixtures['homeTeamName']}}</td><td>vs</td><td>{{fixtures['awayTeamName']}}</td><td colspan="3">Matchday {{fixtures['matchday']}}</td></tr></tr>
+    </table>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="footnotify2.css">
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+      <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+<script src="dist/jquery.validate.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+        <link rel="stylesheet" href="css.css">
+    </head>
+    <script>
+// Wait for the DOM to be ready
+$(function () {
+  // Initialize form validation on the registration form.
+  // It has the name attribute "registration"
+  $("form[name='myform']").validate({
+    // Specify validation rules
+    rules: {
+      // The key name on the left side is the name attribute
+      // of an input field. Validation rules are defined
+      // on the right side
+      user_name:{ 
+	  required: true,
+	  minlength: 4
+	  },
+      
+      email: {
+        required: true,
+       
+        email: true
+      },
+      user_password: {
+        required: true,
+        minlength: 6
+      },
+	
+        Gender:{ required:true },
+        subscription:{required:true},
+          
+    },
+	
+   
+    messages: {
+      name: {
+        required: "Please enter your first name",
+        minlength: "First name must be at least 4 characters long"
+      },
+      lastname: {
+        required: "Please enter your last name",
+        minlength: "Last name must be at least 4 characters long"
+      },
+      password: {
+        required: "Please provide a password",
+        minlength: "Your password must be at least 6 characters long"
+      },
+	  
+      email: "Please enter a valid email address"
+    },
+	
+   
+     Gender:
+          {
+            required:"Please select a gender"
+          },
+		  subscription:{required:"Please select a valid Subscription" },
+    submitHandler: function(myform) {
+      myform.submit();
+    }
+  });
+});
+</script>
+    <body>
+<div class="header">
+		<ul>
+			<li style="float:left;"><a href="footnotify.html"><img style="margin-top:0px;height:33px;width:200px;" src="Footnotify.png"></a></li>
+			<li style="float:right;"><form><input type="text" name="search" placeholder="Search.."></form></li>
+		</ul>
+	</div>
+	<div class="menu">
+		<ul>
+			<li><a  href="footnotify.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="login.html">Login</a></li>
+			<li><a href="myteam.html">My Team</a></li>
+			<li><a href="news.html">News</a></li>
+			<li><a href="streams.html">Live Stream</a></li>
+			<li><a href="scores.html">Results</a></li>	
+			<li><a href="highlights.html">Highlights</a></li>
+
+			<li  style="border:0px;border-bottom:5px; border-style: solid;  border-color: white;"><a style="color:grey;" href="registration.html">Register</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</div>
+  
+  <div class="container">
+  <h2>Progress</h2>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="0o" aria-valuemin="0" aria-valuemax="100" style="width:1%">
+      0%
+    </div>
+  </div>
+</div>
+    
+<div class="main-content">
+
+
+
+
+      <form  name="myform" method="post" >
+      
+        <h1>Sign Up</h1>
+        
+        <fieldset>
+          <legend><span class="number">1</span>Your basic info</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name">
+          
+    <a href="#" data-toggle="tooltip" data-placement="tip" title="E.g John Smith!">Tip</a>
+   
+          
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="user_email">
+         <a href="#" data-toggle="tooltip" data-placement="tip" title="E.g abc@gmail.com">Tip</a>
+   
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="user_password">
+         <a href="#" data-toggle="popover" title="Popover " data-content="Password must contain one special character and one uppercase letter">popover</a>
+   
+   </br></br>      <span> Gender: <input type="radio" name="Gender" value="Male" />Male</span>
+<span>  <input type="radio" name="Gender" value="Female" /> Female </span><br/>
+ 
+         
+        </fieldset>
+        
+        <fieldset>
+        <label for="job">Team:</label>
+      <input type="text" list="team"/>
+<datalist id="team">
+<option label="AFC Bournemouth" >AFC Bournemouth </option>
+<option label ="Arsenal" >Arsenal </option>
+<option label ="Burnley">Burnley </option>
+<option label ="Chelsea">Chelsea </option>
+<option label ="Crystal Palace">Crystal Palace </option>
+<option label ="Everton">Everton </option>
+<option label ="Hull City">Hull City </option>
+<option label ="Liverpool" selected>Liverpool </option>
+<option label ="Leicester City">Leicester City </option>
+<option label ="Manchester City">Manchester City </option>
+<option label ="Manchester United">Manchester United </option>
+<option label ="Middlesbrough FC">Middlesbrough FC</option>
+<option label ="Southampton">Southampton </option>
+<option label ="Stoke">Stoke </option>
+<option label ="Swansea City">Swansea City </option>
+<option label ="Sunderland">Sunderland </option>
+<option label ="Tottenham Hotspur">Tottenham Hotspur </option>
+<option label ="Watford">Watford </option>
+<option label ="West Bromwich Albion">West Bromwich Albion </option>
+<option label ="West Ham United">West Ham United </option>
+</datalist>
+</p>
+</span>
+<fieldset>
+<legend>
+<span class="number">2</span>Subscription:</legend>
+<p><label> <input  type="radio" name="subscription" value="daily" />Daily ($2.99)  </label></p>
+<p><label> <input  type="radio" name="subscription" value="weekly" />Weekly($7.99) </label></p>
+<p><label> <input  type="radio" name="subscription" value="monthly" /> Monthly($10.99)</label></p>
+<p> <label>  <input  type="radio" name="subscription" value="yearly"  />Yearly ($15.99)</label></p>
+</fieldset>
+     <button type="submit"/>Sign Up</button>
+      </form>
+</div>
+</span>
+<div class="footer">
+	<center>
+	<img style="height:80px; width:100px;" src="Footnotify.png"></center>
+	<p>This site is a production of 4 of the Boys.</p>
+	<p>All content on this site is original.</p>		
+	</div>
+    
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover(); 
+});
+</script>
+    </body>
+</html>

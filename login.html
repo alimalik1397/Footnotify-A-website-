@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>Login</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* Below line is used for online Google font */
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+h2{
+text-align: center;
+font-size: 24px;
+}
+hr{
+margin-bottom: 30px;
+}
+div.container{
+width: 960px;
+height: 610px;
+margin:50px auto;
+font-family: 'Droid Serif', serif;
+position:relative;
+}
+div.main{
+width: 320px;
+margin-top: 80px;
+float:left;
+padding: 10px 55px 40px;
+background-color: lightgrey;
+border: 15px solid white;
+box-shadow: 0 0 10px;
+border-radius: 2px;
+font-size: 13px;
+}
+input[type=text],[type=password] {
+width: 97.7%;
+height: 34px;
+padding-left: 5px;
+margin-bottom: 20px;
+margin-top: 8px;
+box-shadow: 0 0 5px #00F5FF;
+border: 2px solid #00F5FF;
+color: #4f4f4f;
+font-size: 16px;
+}
+
+label{
+color: #464646;
+text-shadow: 0 1px 0 #fff;
+font-size: 14px;
+font-weight: bold;
+}
+
+#login {
+width: 100%;
+background: linear-gradient(#22abe9 5%, #36caf0 100%);
+border: 1px solid #0F799E;
+font-size: 20px;
+margin-top: 15px;
+padding: 8px;
+font-weight: bold;
+cursor: pointer;
+color: white;
+text-shadow: 0px 1px 0px #13506D;
+}
+
+#login:hover{
+background: linear-gradient(#36caf0 5%, #22abe9 100%);
+}
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script >
+$(document).ready(function(){
+$("#login").click(function(){
+var email = $("#email").val();
+var password = $("#password").val();
+// Checking for blank fields.
+if( email =='' || password ==''){
+$('input[type="text"],input[type="password"]').css("border","2px solid red");
+$('input[type="text"],input[type="password"]').css("box-shadow","0 0 3px red");
+alert("Please fill all fields!");
+}else {
+$.post("login.php",{ email1: email, password1:password},
+function(data) {
+if(data=='Invalid Email.') {
+$('input[type="text"]').css({"border":"2px solid red","box-shadow":"0 0 3px red"});
+$('input[type="password"]').css({"border":"2px solid #00F5FF","box-shadow":"0 0 5px #00F5FF"});
+alert(data);
+}else if(data=='Email or Password is wrong!'){
+$('input[type="text"],input[type="password"]').css({"border":"2px solid red","box-shadow":"0 0 3px red"});
+alert(data);
+} else if(data=='Successfully Logged in.'){
+$("form")[0].reset();
+$('input[type="text"],input[type="password"]').css({"border":"2px solid #00F5FF","box-shadow":"0 0 5px #00F5FF"});
+alert(data);
+} else{
+alert(data);
+}
+});
+}
+});
+});
+</script>
+</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<body background="back.jpg">
+<div class="container">
+<div class="main" style="float: left; font-color: white" background="div.jpg">
+<form class="form" method="post" action="#">
+<h2>Login</h2>
+<label>Email :</label>
+<input type="text" name="demail" id="email">
+<label>Password :</label>
+<input type="password" name="password" id="password">
+<input type="button" onclick="window.location = 'footnotify.html';" name="login" id="login" value="Login">
+</form>
+<a href="Registration.html">Sign up</a><br>
+<a href="Contact.html">Contact us</a><br>
+<a href="About.html">About</a>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<html lang="en">
+<head>
+  <title>Live Streams</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+.button {
+ 	color: darkblue;
+  	background: lightgrey;
+ 	 font-weight: bold;
+ 	 border: 1px solid #900;
+}
+.button:hover {
+  color: black;
+  background: #900;
+}
+   .hidden {
+        display: none;
+   {
+   .visible {
+        display: block;
+   }
+</style>
+<link rel="stylesheet" type="text/css" href="footnotify.css">
+</head>
+
+
+<body>
+
+
+<div class="header">
+    <ul>
+      <li style="float:left;"><a href="footnotify.html"><img style="margin-top:0px;height:33px;width:200px;" src="Footnotify.png"></a></li>
+      <li style="float:right;"><form><input type="text" name="search" placeholder="Search.."></form></li>
+    </ul>
+  </div>
+
+  <div class="menu">
+    <ul>
+      <li><a href="footnotify.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="myteam.html">My Team</a></li>
+      <li><a href="news.html">News</a></li>
+      <li style="border:0px;border-bottom:5px; border-style: solid;  border-color: white;"><a style="color:grey;" href="streams.html">Live Stream</a></li>
+      <li><a href="scores.html">Results</a></li>  
+      <li><a href="highlights.html">Highlights</a></li>
+      <li><a href="D:\Lectures\4th Semester\Web Engineering\Footnotify\registration.html">Register</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+
+<br><br><br>
+
+<div style="width:20%; height:auto;" align="left">
+<button class="button" id="1">LINK1</button>
+<br>
+<br>
+<button class="button" id="2">LINK2</button>
+<br>
+<br>
+<button class="button" id="3">LINK3</button>
+<br>
+<br>
+<button class="button" id="4">LINK4</button>
+<br>
+<br>
+</div>
+
+
+<script type="text/javascript">
+
+    var a = document.getElementById('first');
+    var b = document.getElementById('1');
+ 	 b.onclick = function() {
+        first.setAttribute('class', 'visible');
+     	second.setAttribute('class', 'hidden');
+	third.setAttribute('class', 'hidden');
+	forth.setAttribute('class', 'hidden');
+};
+
+  var c = document.getElementById('second');
+    var d = document.getElementById('2');
+ 	 d.onclick = function() {
+        first.setAttribute('class', 'hidden');
+     	second.setAttribute('class', 'visible');
+	third.setAttribute('class', 'hidden');
+	forth.setAttribute('class', 'hidden');
+};
+
+  var e = document.getElementById('third');
+    var f = document.getElementById('3');
+ 	 f.onclick = function() {
+        first.setAttribute('class', 'hidden');
+     	second.setAttribute('class', 'hidden');
+	third.setAttribute('class', 'visible');
+	forth.setAttribute('class', 'hidden');
+};
+
+  var g = document.getElementById('forth');
+    var h = document.getElementById('4');
+ 	 h.onclick = function() {
+        first.setAttribute('class', 'hidden');
+     	second.setAttribute('class', 'hidden');
+	third.setAttribute('class', 'hidden');
+	forth.setAttribute('class', 'visible');
+
+
+
+};
+
+</script>
+
+<div class="hidden" id="first" width="560" height="315" align="center">
+<IFRAME FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=620 HEIGHT=460 SRC="http://www.skyembed.com/beinsport7.php" ALLOWFULLSCREEN></IFRAME>
+</div>
+
+<div class="hidden" id="second" width="560" height="315" align="center">
+<IFRAME FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=620 HEIGHT=460 SRC="http://www.skyembed.com/espnusa.php" ALLOWFULLSCREEN></IFRAME>
+</div>
+
+<div class="hidden" id="third" width="560" height="315" align="center">
+<IFRAME FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=620 HEIGHT=460 SRC="http://www.skyembed.com/ten1.php" ALLOWFULLSCREEN></IFRAME>
+</div>
+
+<div class="hidden" id="forth" width="560" height="315" align="center">
+<IFRAME FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=620 HEIGHT=450 SRC="http://www.skyembed.com/beinsport2.php" ALLOWFULLSCREEN></IFRAME>
+</div>
+
+
+</body>
+</html>
